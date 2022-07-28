@@ -31,7 +31,7 @@ body {
   font-family: "PT Sans"; }
   body.lock {
     overflow: hidden; }
-    @media (max-width: 767.98) {
+    @media (max-width: 768px) {
       body.lock {
         width: 100%;
         position: fixed;
@@ -64,13 +64,13 @@ img {
   overflow: hidden; }
 
 .container {
-  max-width: 880px;
+  max-width: 892px;
   margin: 0 auto;
   width: 100%; }
-  @media (max-width: 892) {
+  @media (min-width: 892px) {
     .container {
-      max-width: 750px; } }
-  @media (max-width: 750) {
+      background: red; } }
+  @media (max-width: 750px) {
     .container {
       max-width: none;
       padding: 0 10px; } }
@@ -84,7 +84,9 @@ header {
 
 .header-top-lang {
   display: flex; }
-
+  @media (max-width: 768px) {
+    .header-top-lang {
+      margin-top: 10px; } }
 .header-top-lang__item {
   display: block;
   line-height: 19px;
@@ -106,41 +108,49 @@ header {
   text-transform: uppercase;
   font-family: "Cormorant SC";
   font-weight: bolder; }
-
+  @media (max-width: 768px) {
+    .header-top__link {
+      font-size: 14px;
+      margin: 20px 0 10px 0; } }
 .header-bottom {
   margin: -10px 0 0 0;
   display: flex;
-  align-items: center; }
-
+  align-items: center;
+  justify-content: space-between; }
+  @media (max-width: 768px) {
+    .header-bottom {
+      margin: 0 auto;
+      display: block; } }
 .header-bottom-menu--right .header-bottom-menu-list {
   margin: 0;
   display: flex;
   justify-content: flex-end;
   text-align: right; }
   .header-bottom-menu--right .header-bottom-menu-list li {
-    margin: 0 0 0 45px !important; }
+    padding: 10px; }
     .header-bottom-menu--right .header-bottom-menu-list li:first-child {
       margin: 0; }
-    @media (max-width: 892) {
-      .header-bottom-menu--right .header-bottom-menu-list li {
-        margin: 0 0 0 20px !important; } }
+
 .header-bottom-menu-list {
   display: flex; }
   .header-bottom-menu-list li {
-    margin: 0 45px 0 0; }
+    padding: 10px; }
   .header-bottom-menu-list:last-child {
     margin: 0; }
-  @media (max-width: 892) {
+  @media (max-width: 892px) {
     .header-bottom-menu-list {
       margin: 0 20px 0 0; } }
 .header-bottom-menu__link {
   font-family: "Cormorant SC";
   color: #000;
   font-size: 15px;
+  font-weight: bold;
   text-transform: uppercase;
   letter-spacing: 1.5px;
   white-space: nowrap; }
-
+  @media (max-width: 320px) {
+    .header-bottom-menu__link {
+      font-size: 12px; } }
 .header-logo {
   display: block;
   text-align: center; }
@@ -150,14 +160,17 @@ header {
   color: #000;
   font-family: "Cormorant SC";
   font-size: 10px;
-  line-height: 25px;
   text-transform: uppercase;
   letter-spacing: 8px; }
 
 .header-logo__image {
   display: inline-block;
   margin: 13px 0 22px 0; }
-
+  @media (max-width: 762px) {
+    .header-logo__image {
+      margin: 2px 0 5px 0; }
+      .header-logo__image img {
+        width: 150px; } }
 .header-menu__icon {
   display: none; }
 

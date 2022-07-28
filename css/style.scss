@@ -22,7 +22,7 @@ aside, nav, footer, header, section{display: block;}
 html, body{height: 100%; margin: 0; padding: 0; min-width: $minwidth; position: relative; width: 100%;}
 body{font-size: 100%; line-height: 1; font-family: $fontfamily;
     &.lock{overflow: hidden;
-        @media(max-width:$md3) {
+        @media(max-width:768px) {
             width: 100%;
             position: fixed;
             overflow: hidden;
@@ -43,18 +43,14 @@ img{vertical-align: top;}
 }
 
 //Основная сетка
-.container{max-width: $mw+px; margin: 0 auto; width: 100%; 
+.container {
+    max-width: 892px; margin: 0 auto; width: 100%; 
     // @media (max-width:$md1) {max-width: 970px;}
-    @media (max-width:$md1) {max-width: 750px;}
-    @media (max-width:$md2) {max-width: none; padding: 0 10px;}
+    // @media (max-width:892px) {max-width: 750px;} 
+    @media(min-width: 892px) {background: red;}
+    @media (max-width:750px) {max-width: none; padding: 0 10px;}
 }
 
-// body {
-    // font-family: $fontfamily;
-    // text-align: center;
-    // max-width: 1300px;
-    // margin: 0 auto;
-// }
 header {
     padding: 29px 0px 33px 0px;
     background: #fff;
@@ -65,6 +61,7 @@ header {
 }
 .header-top-lang {
     display: flex;
+    @media(max-width:768px) {margin-top: 10px;}
 }
 .header-top-lang__item {
     display: block;
@@ -88,11 +85,16 @@ header {
     text-transform: uppercase;
     font-family: "Cormorant SC";
     font-weight: bolder;
+    //mine: so that the text fits in the container     
+    @media (max-width:768px) {font-size: 14px; margin: 20px 0 10px 0;}
 }
 .header-bottom {
     margin: -10px 0 0 0;
+    //mine: so that the logo is in the middle    
+    @media (max-width: 768px){margin: 0 auto; display: block;}
     display: flex;
     align-items: center;
+    justify-content: space-between;
 }
 // .header-bottom__column {
 //     flex: 0 0 33.333%;
@@ -105,12 +107,15 @@ header {
         display: flex;
         justify-content: flex-end;
         text-align: right;
-        li {margin: 0 0 0 45px !important;
+        li {
+            //mine: instead of margins
+            padding: 10px;
+            // margin: 0 0 0 45px !important;
             &:first-child {margin: 0;}
             // &:last-child {margin: 0 0 0 45px;}
-            @media (max-width:$md1) {
-                margin: 0 0 0 20px !important;
-            }
+            // @media (max-width:892px) {
+            //     margin: 0 0 0 20px !important;
+            // }
         }
      }   
     }
@@ -118,20 +123,25 @@ header {
 .header-bottom-menu-list {
     display: flex;
     li {
-        margin: 0 45px 0 0;
+        //mine: instead of margins
+        padding: 10px;
+        // margin: 0 45px 0 0;
     }
     &:last-child {margin: 0;}
-    @media (max-width:$md1) {
-        margin: 0 20px 0 0;
+    @media (max-width:892px) {
+        margin: 0 20px 0 0 ;
     }
 }
 .header-bottom-menu__link {
     font-family: "Cormorant SC";
     color: #000;
     font-size: 15px;
+    font-weight: bold;
     text-transform: uppercase;
     letter-spacing: 1.5px;
+    //mine: so that words do not wrap to a new line
     white-space: nowrap;
+    @media (max-width:320px) {font-size: 12px;}
 }
 .header-logo {
     display: block;
@@ -142,15 +152,18 @@ header {
     color:#000;
     font-family: "Cormorant SC";
     font-size: 10px;
-    line-height: 25px;
     text-transform: uppercase;
     letter-spacing: 8px;
 }
 .header-logo__image {
     display: inline-block;
     margin: 13px 0 22px 0;
+    @media(max-width:762px){
+        margin: 2px 0 5px 0;
+        img{width: 150px;}
+    }
 }
-.header-menu__icon  {display: none;}
+.header-menu__icon {display: none;}
 
 @media (max-width:768px){
 .header-menu__icon {
