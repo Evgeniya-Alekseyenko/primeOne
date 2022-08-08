@@ -76,7 +76,7 @@ img {
   overflow: hidden; }
 
 .container {
-  max-width: 892px;
+  max-width: 1400px;
   margin: 0 auto;
   width: 100%; }
   @media (max-width: 750px) {
@@ -254,3 +254,221 @@ header {
     transition: all 0.8s ease 0s; }
     .header-menu.active {
       left: 0; } }
+
+.btn {
+  height: 50px;
+  line-height: 50px;
+  background-color: #000;
+  display: inline-block;
+  padding: 0 33px;
+  font-size: 15px;
+  font-family: 'Bebas';
+  text-transform: uppercase;
+  color: #fff;
+  box-sizing: border-box; }
+  .btn--w {
+    background-color: #fff;
+    color: #000; }
+  .btn.fw {
+    width: 100%; }
+
+.private {
+  display: flex;
+  background-color: #000;
+  margin: 0 0 75px 0; }
+  @media (max-width: 768px) {
+    .private {
+      margin: 0 0 40px 0; } }
+.private__column {
+  flex: 0 0 50%; }
+  @media (max-width: 768px) {
+    .private__column {
+      flex: 1 1 100%; }
+      .private__column:first-child {
+        display: none; } }
+.private-body {
+  padding: 75px 0 75px 60px; }
+  @media (max-width: 768px) {
+    .private-body {
+      padding: 30px 0 30px 30px; } }
+.private-body-content {
+  max-width: 305px; }
+
+.private__image {
+  height: 100%; }
+
+.logo {
+  max-height: 100%;
+  max-width: 100%; }
+
+.private-body__title {
+  font-family: 'Cormorant SC';
+  font-size: 50px;
+  letter-spacing: 5px;
+  text-transform: uppercase;
+  color: #fff;
+  margin: 0 0 30px 0; }
+  @media (max-width: 768px) {
+    .private-body__title {
+      font-size: 35px;
+      margin: 0 0 20px 0; } }
+.private-body__text {
+  font-size: 15px;
+  line-height: 25px;
+  color: #fff;
+  margin: 0 0 50px 0; }
+  @media (max-width: 768px) {
+    .private-body__text {
+      margin: 0 0 30px 0; } }
+.private-body-buttons {
+  display: flex;
+  align-items: center; }
+
+.private-body-buttons__link {
+  font-family: 'Bebas';
+  text-transform: uppercase;
+  color: #fff;
+  font-size: 15px;
+  text-decoration: underline;
+  margin-left: 15px;
+  letter-spacing: 1.5px; }
+
+@media (max-width: 768px) {
+  .private-body-buttons__item {
+    width: 140px;
+    height: auto;
+    font-size: 8px;
+    letter-spacing: 1px; } }
+
+.products {
+  margin: 0 0 40px 0; }
+  @media (max-width: 768px) {
+    .products {
+      margin: 0; } }
+.products-body {
+  display: flex; }
+  @media (max-width: 768px) {
+    .products-body {
+      flex-wrap: wrap; } }
+.products_column {
+  flex: 0 0 25%;
+  margin: 0 0 40px 0; }
+  @media (max-width: 768px) {
+    .products_column {
+      flex: 0 0 50%; } }
+  @media (max-width: 380px) {
+    .products_column {
+      flex: 1 1 100%; } }
+.products-item {
+  display: flex;
+  flex-direction: column; }
+
+.products-item__image {
+  display: block;
+  padding-bottom: 15px; }
+  @media (max-width: 380px) {
+    .products-item__image {
+      margin: 0 0 15px 0; } }
+.products-item__title {
+  height: 50px;
+  overflow: hidden;
+  padding: 0 10px 0 0;
+  max-width: 185px;
+  font-family: 'Cormorant SC';
+  letter-spacing: 2.5px;
+  text-transform: uppercase;
+  color: #000;
+  font-size: 25px;
+  margin: 0 0 30px 0; }
+  @media (max-width: 380px) {
+    .products-item__title {
+      max-width: none;
+      height: auto;
+      overflow: visible;
+      margin: 0 0 20px 0; } }
+.products-item__text {
+  padding: 0 10px 0 0;
+  max-width: 185px;
+  font-size: 15px;
+  line-height: 25px;
+  margin: 0 0 25px 0; }
+  @media (max-width: 380px) {
+    .products-item__text {
+      max-width: none;
+      margin: 0 0 15px 0; } }
+.products-item__btn {
+  margin: 0 20px 29px 0; }
+  @media (max-width: 768px) {
+    .products-item__btn {
+      padding: 0 12px 0 12px;
+      height: auto;
+      font-size: 8px;
+      letter-spacing: 1px;
+      text-align: center; } }
+.products-item__link {
+  font-family: 'Bebas';
+  text-transform: uppercase;
+  color: #000;
+  font-size: 15px;
+  letter-spacing: 1.5px;
+  text-decoration: underline; }
+
+.why-top {
+  display: flex;
+  background-color: #000; }
+
+.why-top__column {
+  flex: 0 0 50%; }
+
+.why-top__text {
+  text-align: right;
+  color: #fff;
+  font-family: 'Cormorant SC';
+  font-size: 50px;
+  text-transform: uppercase;
+  letter-spacing: 5px;
+  padding: 50px 60px 50px 0; }
+
+.why-top__image {
+  height: 100%; }
+
+.why-body {
+  padding: 50px 0 0 0;
+  background-color: #ebebeb; }
+
+.why-body-row {
+  display: flex;
+  flex-wrap: wrap; }
+
+.why-body__column {
+  flex: 0 0 50%;
+  margin: 0 0 50px 0; }
+
+.why-body-item {
+  display: flex; }
+
+.why-body-item__icon {
+  flex: 0 0 100px;
+  height: 100px;
+  background-color: #000;
+  display: flex;
+  justify-content: center;
+  align-items: center; }
+
+.why-body-item-body {
+  flex: 1 1 100%;
+  display: flex;
+  flex-direction: column;
+  padding: 0 0 0 11px; }
+
+.why-body-item-body__tittle {
+  flex: 1 1 auto;
+  font-family: 'Cormorant SC';
+  text-transform: uppercase;
+  letter-spacing: 2.5px;
+  font-size: 25px; }
+
+.why-body-item-body__text {
+  font-size: 15px;
+  padding: 0 15px 0 0;
+  line-height: 25px; }
