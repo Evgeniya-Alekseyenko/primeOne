@@ -385,7 +385,9 @@ header {
       max-width: none;
       height: auto;
       overflow: visible;
-      margin: 0 0 20px 0; } }
+      margin: 0 0 20px 0;
+      font-size: 20px;
+      text-align: center; } }
 .products-item__text {
   padding: 0 10px 0 0;
   max-width: 185px;
@@ -395,7 +397,8 @@ header {
   @media (max-width: 380px) {
     .products-item__text {
       max-width: none;
-      margin: 0 0 15px 0; } }
+      margin: 0 0 15px 0;
+      text-align: center; } }
 .products-item__btn {
   margin: 0 20px 29px 0; }
   @media (max-width: 768px) {
@@ -412,14 +415,20 @@ header {
   font-size: 15px;
   letter-spacing: 1.5px;
   text-decoration: underline; }
-
+  @media (max-width: 768px) {
+    .products-item__link {
+      padding-left: 30%; } }
 .why-top {
   display: flex;
   background-color: #000; }
 
 .why-top__column {
   flex: 0 0 50%; }
-
+  @media (max-width: 768px) {
+    .why-top__column {
+      flex: 1 1 100%; }
+      .why-top__column:last-child {
+        display: none; } }
 .why-top__text {
   text-align: right;
   color: #fff;
@@ -428,14 +437,20 @@ header {
   text-transform: uppercase;
   letter-spacing: 5px;
   padding: 50px 60px 50px 0; }
-
+  @media (max-width: 768px) {
+    .why-top__text {
+      padding: 30px 0;
+      font-size: 28px;
+      text-align: center; } }
 .why-top__image {
   height: 100%; }
 
 .why-body {
   padding: 50px 0 0 0;
   background-color: #ebebeb; }
-
+  @media (max-width: 480px) {
+    .why-body {
+      padding: 30px 0 0 0; } }
 .why-body-row {
   display: flex;
   flex-wrap: wrap; }
@@ -443,7 +458,12 @@ header {
 .why-body__column {
   flex: 0 0 50%;
   margin: 0 0 50px 0; }
-
+  @media (max-width: 768px) {
+    .why-body__column {
+      flex: 1 1 100%; } }
+  @media (max-width: 480px) {
+    .why-body__column {
+      margin: 0 0 30px 0; } }
 .why-body-item {
   display: flex; }
 
@@ -454,7 +474,13 @@ header {
   display: flex;
   justify-content: center;
   align-items: center; }
-
+  @media (max-width: 768px) {
+    .why-body-item__icon {
+      flex: 0 0 80px;
+      height: 80px;
+      padding: 15px; }
+      .why-body-item__icon img {
+        max-width: 100%; } }
 .why-body-item-body {
   flex: 1 1 100%;
   display: flex;
@@ -467,8 +493,95 @@ header {
   text-transform: uppercase;
   letter-spacing: 2.5px;
   font-size: 25px; }
-
+  @media (max-width: 768px) {
+    .why-body-item-body__tittle {
+      font-size: 20px; } }
 .why-body-item-body__text {
   font-size: 15px;
   padding: 0 15px 0 0;
   line-height: 25px; }
+
+.contacts {
+  padding: 80px 0 0 0; }
+
+.contacts__title {
+  font-family: 'Cormorant SC';
+  text-transform: uppercase;
+  font-size: 50px;
+  letter-spacing: 5px;
+  margin: 0 0 30px 0; }
+
+.contacts-body {
+  display: flex;
+  flex-wrap: wrap; }
+
+.contacts-body__column {
+  flex: 0 0 50%;
+  margin: 0 0 20px 0; }
+
+.contacts-body__item {
+  font-size: 15px;
+  color: #000;
+  display: inline-block;
+  line-height: 27px;
+  padding: 0 0 0 35px; }
+
+.contacts-body__item--1 {
+  background: url(../img/1387.png) left no-repeat; }
+
+.contacts-body__item--2 {
+  background: url(../img/1380.png) left no-repeat; }
+
+.contacts-body__item--3 {
+  background: url(../img/1379.png) left no-repeat; }
+
+.contacts-social {
+  display: flex; }
+
+.contacts-social__item {
+  margin: 0 30px 0 0; }
+  .contacts-social__item:last-child {
+    margin: 0; }
+
+.contacts-content {
+  display: flex;
+  background-color: #000; }
+
+.contacts-content__column {
+  flex: 0 0 50%; }
+
+.contacts-content__map {
+  height: 100%; }
+
+.contacts-content-form {
+  padding: 55px 60px; }
+
+.contacts-content-form__title {
+  font-family: 'Cormorant SC';
+  text-transform: uppercase;
+  font-size: 25px;
+  letter-spacing: 5px;
+  margin: 0 0 30px 0;
+  color: #fff; }
+
+.input {
+  border-radius: 0 !important;
+  width: 100%;
+  display: block;
+  padding: 0 18px;
+  height: 50px;
+  border: 2px solid #959595;
+  background-color: #252525;
+  color: #959595;
+  font-size: 15px; }
+
+textarea.input {
+  resize: none;
+  height: 100px;
+  padding: 10px 18px; }
+
+.contacts-content-form-body {
+  max-width: 375px; }
+
+.contacts-content-form-line {
+  margin: 0 0 25px 0; }
