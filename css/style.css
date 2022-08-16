@@ -425,6 +425,12 @@ header {
   @media (max-width: 768px) {
     .products-item__link {
       padding-left: 30%; } }
+.products-info {
+  display: flex;
+  flex-direction: column;
+  flex-basis: 100%;
+  justify-content: space-between; }
+
 .why-top {
   display: flex;
   background-color: #000; }

@@ -522,6 +522,12 @@ header {
         padding-left: 30%;
     }
 }
+.products-info {
+    display: flex;
+    flex-direction: column;
+    flex-basis: 100%;
+    justify-content: space-between;
+}
 
 // Третий блок
 
