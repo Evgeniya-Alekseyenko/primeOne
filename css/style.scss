@@ -92,8 +92,6 @@ img {
     width: 100%;
     min-height: 100%;
     overflow: hidden;
-    // &.loaded {
-    // }
 }
 
 //Основная сетка
@@ -101,11 +99,6 @@ img {
     max-width: 1400px;
     margin: 0 auto;
     width: 100%;
-    // @media (max-width:$md1) {max-width: 970px;}
-    // @media (max-width:892px) {max-width: 750px;}
-    // @media (min-width: 892px) {
-    //     background: red;
-    // }
     @media (max-width: 750px) {
         max-width: none;
         padding: 0 10px;
@@ -448,8 +441,10 @@ header {
     }
 }
 .products_column {
+    display: flex;
     flex: 0 0 25%;
     margin: 0 0 40px 0;
+    align-items: stretch;
     @media (max-width: 768px) {
         flex: 0 0 50%;
     }
@@ -460,10 +455,15 @@ header {
 .products-item {
     display: flex;
     flex-direction: column;
+    justify-content: space-between;
 }
 .products-item__image {
     display: block;
-    // padding: 0 0 100% 0;
+    padding: 0 0 100% 0;
+    img {
+        width: 100%;
+        height: 500px;
+    }
     padding-bottom: 15px;
     @media (max-width: 380px) {
         margin: 0 0 15px 0;
@@ -506,7 +506,7 @@ header {
     @media (max-width: 768px) {
         padding: 0 12px 0 12px;
         height: auto;
-        font-size: 8px;
+        font-size: 12px;
         letter-spacing: 1px;
         text-align: center;
     }
@@ -622,6 +622,9 @@ header {
 
 .contacts {
     padding: 80px 0 0 0;
+    @media (max-width: 768px) {
+        padding: 30px 0 0 0;
+    }
 }
 .contacts__title {
     font-family: 'Cormorant SC';
@@ -637,6 +640,9 @@ header {
 .contacts-body__column {
     flex: 0 0 50%;
     margin: 0 0 20px 0;
+    @media (max-width: 768px) {
+        flex: 1 1 100%;
+    }
 }
 .contacts-body__item {
     font-size: 15px;
@@ -666,15 +672,24 @@ header {
 .contacts-content {
     display: flex;
     background-color: #000;
+    @media (max-width: 768px) {
+        display: block;
+    }
 }
 .contacts-content__column {
     flex: 0 0 50%;
 }
 .contacts-content__map {
     height: 100%;
+    @media (max-width: 768px) {
+        height: 300px;
+    }
 }
 .contacts-content-form {
     padding: 55px 60px;
+    @media (max-width: 768px) {
+        padding: 30px;
+    }
 }
 .contacts-content-form__title {
     font-family: 'Cormorant SC';
@@ -702,7 +717,52 @@ textarea.input {
 }
 .contacts-content-form-body {
     max-width: 375px;
+    @media (max-width: 768px) {
+        max-width: none;
+    }
 }
 .contacts-content-form-line {
     margin: 0 0 25px 0;
+}
+// Footer
+
+.footer-body {
+    display: flex;
+    justify-content: space-between;
+    height: 125px;
+    align-items: center;
+    @media (max-width: 768px) {
+        flex-direction: column;
+        height: auto;
+        padding: 15px 0;
+    }
+    @media (min-width: 769px) {
+        margin: 20px;
+    }
+}
+.footer-body__column {
+    @media (max-width: 768px) {
+        &:first-child {
+            order: 2;
+        }
+        &:last-child {
+            order: 1;
+            margin: 0 0 15px 0;
+        }
+    }
+}
+.footer__text {
+    color: #4d4d4d;
+    font-size: 15px;
+    line-height: 25px;
+    a {
+        text-decoration: underline;
+        color: #4d4d4d;
+        &:hover {
+            text-decoration: none;
+        }
+    }
+    @media (max-width: 768px) {
+        text-align: center;
+    }
 }

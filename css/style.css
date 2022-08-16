@@ -351,8 +351,10 @@ header {
     .products-body {
       flex-wrap: wrap; } }
 .products_column {
+  display: flex;
   flex: 0 0 25%;
-  margin: 0 0 40px 0; }
+  margin: 0 0 40px 0;
+  align-items: stretch; }
   @media (max-width: 768px) {
     .products_column {
       flex: 0 0 50%; } }
@@ -361,11 +363,16 @@ header {
       flex: 1 1 100%; } }
 .products-item {
   display: flex;
-  flex-direction: column; }
+  flex-direction: column;
+  justify-content: space-between; }
 
 .products-item__image {
   display: block;
+  padding: 0 0 100% 0;
   padding-bottom: 15px; }
+  .products-item__image img {
+    width: 100%;
+    height: 500px; }
   @media (max-width: 380px) {
     .products-item__image {
       margin: 0 0 15px 0; } }
@@ -405,7 +412,7 @@ header {
     .products-item__btn {
       padding: 0 12px 0 12px;
       height: auto;
-      font-size: 8px;
+      font-size: 12px;
       letter-spacing: 1px;
       text-align: center; } }
 .products-item__link {
@@ -503,7 +510,9 @@ header {
 
 .contacts {
   padding: 80px 0 0 0; }
-
+  @media (max-width: 768px) {
+    .contacts {
+      padding: 30px 0 0 0; } }
 .contacts__title {
   font-family: 'Cormorant SC';
   text-transform: uppercase;
@@ -518,7 +527,9 @@ header {
 .contacts-body__column {
   flex: 0 0 50%;
   margin: 0 0 20px 0; }
-
+  @media (max-width: 768px) {
+    .contacts-body__column {
+      flex: 1 1 100%; } }
 .contacts-body__item {
   font-size: 15px;
   color: #000;
@@ -546,16 +557,22 @@ header {
 .contacts-content {
   display: flex;
   background-color: #000; }
-
+  @media (max-width: 768px) {
+    .contacts-content {
+      display: block; } }
 .contacts-content__column {
   flex: 0 0 50%; }
 
 .contacts-content__map {
   height: 100%; }
-
+  @media (max-width: 768px) {
+    .contacts-content__map {
+      height: 300px; } }
 .contacts-content-form {
   padding: 55px 60px; }
-
+  @media (max-width: 768px) {
+    .contacts-content-form {
+      padding: 30px; } }
 .contacts-content-form__title {
   font-family: 'Cormorant SC';
   text-transform: uppercase;
@@ -582,6 +599,41 @@ textarea.input {
 
 .contacts-content-form-body {
   max-width: 375px; }
-
+  @media (max-width: 768px) {
+    .contacts-content-form-body {
+      max-width: none; } }
 .contacts-content-form-line {
   margin: 0 0 25px 0; }
+
+.footer-body {
+  display: flex;
+  justify-content: space-between;
+  height: 125px;
+  align-items: center; }
+  @media (max-width: 768px) {
+    .footer-body {
+      flex-direction: column;
+      height: auto;
+      padding: 15px 0; } }
+  @media (min-width: 769px) {
+    .footer-body {
+      margin: 20px; } }
+@media (max-width: 768px) {
+  .footer-body__column:first-child {
+    order: 2; }
+  .footer-body__column:last-child {
+    order: 1;
+    margin: 0 0 15px 0; } }
+
+.footer__text {
+  color: #4d4d4d;
+  font-size: 15px;
+  line-height: 25px; }
+  .footer__text a {
+    text-decoration: underline;
+    color: #4d4d4d; }
+    .footer__text a:hover {
+      text-decoration: none; }
+  @media (max-width: 768px) {
+    .footer__text {
+      text-align: center; } }
