@@ -436,33 +436,40 @@ header {
 }
 .products-body {
     display: flex;
+    justify-content: center;
+    margin: 0 0 40px 0;
     @media (max-width: 768px) {
         flex-wrap: wrap;
     }
 }
 .products_column {
+    // position: relative;
     display: flex;
     flex: 0 0 25%;
-    margin: 0 0 40px 0;
+    margin: 0 0 40px 10px;
     align-items: stretch;
+    flex-direction: column;
+    // padding-bottom: 100px;
     @media (max-width: 768px) {
-        flex: 0 0 50%;
+        // flex: 0 0 50%;
+        flex-basis: 50%;
     }
     @media (max-width: 380px) {
-        flex: 1 1 100%;
+        // flex: 1 1 100%;
+        flex-basis: 100%;
     }
 }
-.products-item {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-}
+// .products-item {
+//     display: flex;
+//     flex-direction: column;
+//     justify-content: space-between;
+// }
 .products-item__image {
     display: block;
     padding: 0 0 100% 0;
     img {
         width: 100%;
-        height: 500px;
+        height: 400px;
     }
     padding-bottom: 15px;
     @media (max-width: 380px) {
@@ -495,6 +502,8 @@ header {
     font-size: 15px;
     line-height: 25px;
     margin: 0 0 25px 0;
+    display: flex;
+    flex-grow: 1;
     @media (max-width: 380px) {
         max-width: none;
         margin: 0 0 15px 0;
@@ -502,7 +511,8 @@ header {
     }
 }
 .products-item__btn {
-    margin: 0 20px 29px 0;
+    // margin: 0 20px 29px 0;
+    margin-right: 20px;
     @media (max-width: 768px) {
         padding: 0 12px 0 12px;
         height: auto;
@@ -523,10 +533,14 @@ header {
     }
 }
 .products-info {
+    // position: absolute;
     display: flex;
+    // flex-grow: 1;
     flex-direction: column;
-    flex-basis: 100%;
     justify-content: space-between;
+    width: 100%;
+    height: 100px;
+    bottom: 0;
 }
 
 // Третий блок
