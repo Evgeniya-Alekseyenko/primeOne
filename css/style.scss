@@ -1,4 +1,3 @@
-// @import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Cormorant+SC&family=PT+Sans&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Cormorant+SC:wght@600&family=PT+Sans&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
 
@@ -97,9 +96,10 @@ img {
 //Основная сетка
 .container {
     max-width: 1400px;
+    padding: 20px;
     margin: 0 auto;
     width: 100%;
-    @media (max-width: 750px) {
+    @media (max-width: 768px) {
         max-width: none;
         padding: 0 10px;
     }
@@ -125,7 +125,7 @@ header {
     @media (max-width: 768px) {
         margin-bottom: 80px;
     }
-    @media (min-width: 769px) {
+    @media (min-width: 768px) {
         font-size: 16px;
         margin: 20px 0 0 20px;
     }
@@ -198,7 +198,7 @@ header {
             text-align: right;
             li {
                 //mine: instead of margins
-                padding: 10px;
+                padding: 5px;
                 // margin: 0 0 0 45px !important;
                 &:first-child {
                     margin: 0;
@@ -221,7 +221,7 @@ header {
     display: flex;
     li {
         //mine: instead of margins
-        padding: 10px;
+        padding: 5px;
         // margin: 0 45px 0 0;
     }
     // &:last-child {
@@ -258,14 +258,14 @@ header {
     font-size: 10px;
     text-transform: uppercase;
     letter-spacing: 8px;
-    @media (max-width: 478px) {
+    @media (max-width: 480px) {
         margin-top: 5px;
     }
 }
 .header-logo__image {
     display: inline-block;
     margin: 13px 0 22px 0;
-    @media (max-width: 478px) {
+    @media (max-width: 480px) {
         margin: 30px 0 5px 0;
         img {
             width: 120px;
@@ -378,7 +378,6 @@ header {
 }
 .private__image {
     height: 100%;
-    // margin: 20% auto;
 }
 .logo {
     max-height: 100%;
@@ -423,8 +422,7 @@ header {
         width: 140px;
         // padding: 0 25px 0 25px;
         height: auto;
-        font-size: 8px;
-        letter-spacing: 1px;
+        font-size: 10px;
     }
 }
 // Второй блок
@@ -468,12 +466,19 @@ header {
     display: block;
     padding: 0 0 100% 0;
     img {
+        // object-fit: cover;
         width: 100%;
-        height: 400px;
     }
     padding-bottom: 15px;
     @media (max-width: 380px) {
         margin: 0 0 15px 0;
+    }
+    @media (min-width: 769px) {
+        img {
+            // object-fit: cover;
+            width: 270px;
+            height: 350px;
+        }
     }
 }
 .products-item__title {
@@ -512,7 +517,8 @@ header {
 }
 .products-item__btn {
     // margin: 0 20px 29px 0;
-    margin-right: 20px;
+    // margin-right: 20px;
+    text-align: center;
     @media (max-width: 768px) {
         padding: 0 12px 0 12px;
         height: auto;
@@ -528,9 +534,9 @@ header {
     font-size: 15px;
     letter-spacing: 1.5px;
     text-decoration: underline;
-    @media (max-width: 768px) {
-        padding-left: 30%;
-    }
+    // @media (max-width: 768px) {
+    //     padding-left: 30%;
+    // }
 }
 .products-info {
     // position: absolute;
@@ -641,7 +647,7 @@ header {
 // Четвертый блок
 
 .contacts {
-    padding: 80px 0 0 0;
+    padding: 50px 0;
     @media (max-width: 768px) {
         padding: 30px 0 0 0;
     }
