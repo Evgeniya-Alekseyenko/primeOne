@@ -1,4 +1,5 @@
 //Adaptive functions
+
 $(window).resize(function (event) {
     adaptive_function();
 });

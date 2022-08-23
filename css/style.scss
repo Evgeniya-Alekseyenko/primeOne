@@ -4,15 +4,8 @@
 //Шрифт по умолчанию
 $fontfamily: 'PT Sans';
 
-//Переменные
-// $minwidth: 320px;
-// $mw: 880;
-// $md1: $mw + 12;
-// $md2: 750;
-// $md3: 767.98;
-// $md4: 479.98;
-
 //Обнуление, общие параметры
+
 * {
     padding: 0;
     margin: 0;
@@ -87,6 +80,7 @@ img {
 }
 
 //Оболочка
+
 .wrapper {
     width: 100%;
     min-height: 100%;
@@ -94,6 +88,7 @@ img {
 }
 
 //Основная сетка
+
 .container {
     max-width: 1400px;
     padding: 20px;
@@ -104,7 +99,6 @@ img {
         padding: 0 10px;
     }
 }
-
 header {
     padding: 29px 0px 33px 0px;
     background: #fff;
@@ -117,7 +111,6 @@ header {
     justify-content: space-between;
     @media (max-width: 768px) {
         justify-content: space-evenly;
-        // padding: 15px 0 0 0;
     }
 }
 .header-top-lang {
@@ -162,7 +155,6 @@ header {
     text-transform: uppercase;
     font-family: 'Cormorant SC';
     font-weight: bolder;
-    //mine: so that the text fits in the container
     @media (max-width: 768px) {
         font-size: 12px;
         margin-bottom: 20px;
@@ -176,7 +168,6 @@ header {
 }
 .header-bottom {
     margin: -10px 0 0 0;
-    //mine: so that the logo is in the middle
     @media (max-width: 768px) {
         margin: 0 auto;
         display: block;
@@ -185,10 +176,6 @@ header {
     align-items: center;
     justify-content: space-between;
 }
-// .header-bottom__column {
-//     flex: 0 0 33.333%;
-// }
-
 .header-bottom-menu {
     &--right {
         .header-bottom-menu-list {
@@ -197,18 +184,11 @@ header {
             justify-content: flex-end;
             text-align: right;
             li {
-                //mine: instead of margins
                 padding: 5px;
-                // margin: 0 0 0 45px !important;
                 &:first-child {
                     margin: 0;
                 }
             }
-
-            // &:last-child {margin: 0 0 0 45px;}
-            // @media (max-width:892px) {
-            //     margin: 0 0 0 20px !important;
-            // }
             @media (max-width: 768px) {
                 display: block;
                 text-align: left;
@@ -216,17 +196,11 @@ header {
         }
     }
 }
-
 .header-bottom-menu-list {
     display: flex;
     li {
-        //mine: instead of margins
         padding: 5px;
-        // margin: 0 45px 0 0;
     }
-    // &:last-child {
-    //     margin: 0;
-    // }
     @media (max-width: 768px) {
         margin: 30px 0 0 0;
         display: block;
@@ -239,7 +213,6 @@ header {
     font-weight: bold;
     text-transform: uppercase;
     letter-spacing: 1.5px;
-    //mine: so that words do not wrap to a new line
     white-space: nowrap;
     @media (max-width: 768px) {
         font-size: 12px;
@@ -349,7 +322,9 @@ header {
         width: 100%;
     }
 }
+
 //Основной контент, лого
+
 .private {
     display: flex;
     background-color: #000;
@@ -421,12 +396,13 @@ header {
 .private-body-buttons__item {
     @media (max-width: 768px) {
         width: 140px;
-        // padding: 0 25px 0 25px;
         height: auto;
         font-size: 10px;
     }
 }
+
 // Второй блок
+
 .products {
     margin: 0 0 40px 0;
     @media (max-width: 768px) {
@@ -442,32 +418,22 @@ header {
     }
 }
 .products_column {
-    // position: relative;
     display: flex;
     flex: 0 0 25%;
     margin: 0 0 40px 10px;
     align-items: stretch;
     flex-direction: column;
-    // padding-bottom: 100px;
     @media (max-width: 768px) {
-        // flex: 0 0 50%;
         flex-basis: 50%;
     }
     @media (max-width: 380px) {
-        // flex: 1 1 100%;
         flex-basis: 100%;
     }
 }
-// .products-item {
-//     display: flex;
-//     flex-direction: column;
-//     justify-content: space-between;
-// }
 .products-item__image {
     display: block;
     padding: 0 0 100% 0;
     img {
-        // object-fit: cover;
         width: 100%;
     }
     padding-bottom: 15px;
@@ -476,8 +442,8 @@ header {
     }
     @media (min-width: 769px) {
         img {
-            // object-fit: cover;
-            width: 270px;
+            object-fit: cover;
+            width: 100%;
             height: 350px;
         }
     }
@@ -517,8 +483,6 @@ header {
     }
 }
 .products-item__btn {
-    // margin: 0 20px 29px 0;
-    // margin-right: 20px;
     text-align: center;
     @media (max-width: 768px) {
         padding: 0 12px 0 12px;
@@ -535,14 +499,9 @@ header {
     font-size: 15px;
     letter-spacing: 1.5px;
     text-decoration: underline;
-    // @media (max-width: 768px) {
-    //     padding-left: 30%;
-    // }
 }
 .products-info {
-    // position: absolute;
     display: flex;
-    // flex-grow: 1;
     flex-direction: column;
     justify-content: space-between;
     width: 100%;
@@ -607,7 +566,6 @@ header {
     display: flex;
 }
 .why-body-item__icon {
-    // width: 100px;
     flex: 0 0 100px;
     height: 100px;
     background-color: #000;
@@ -751,6 +709,7 @@ textarea.input {
 .contacts-content-form-line {
     margin: 0 0 25px 0;
 }
+
 // Footer
 
 .footer-body {
